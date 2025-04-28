@@ -1,6 +1,3 @@
-Natürlich! Hier ist die professionelle englische Version der README, angepasst für dein **PiWork**-Projekt:
-
----
 
 # **PiWork**
 
