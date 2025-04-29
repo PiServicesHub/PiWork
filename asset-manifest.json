@@ -1,0 +1,11 @@
+{
+  "files": {
+    "main.css": "/PiWork/static/css/main.d2f0acc5.css",
+    "main.js": "/PiWork/static/js/main.7ec1502d.js",
+    "index.html": "/PiWork/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.d2f0acc5.css",
+    "static/js/main.7ec1502d.js"
+  ]
+}
