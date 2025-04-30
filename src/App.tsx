@@ -8,6 +8,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen bg-gray-100 text-gray-900 font-sans p-4">
+        {/* Header mit Navigation */}
         <header className="mb-6">
           <h1 className="text-3xl font-bold mb-4">Willkommen zu PiWork!</h1>
           <nav className="bg-white rounded shadow p-4">
@@ -32,12 +33,15 @@ const App: React.FC = () => {
           </nav>
         </header>
 
+        {/* Main Content */}
         <main>
           <Routes>
+            {/* Startseite */}
             <Route
               path="/"
               element={<h2 className="text-xl">Startseite von PiWork</h2>}
             />
+            {/* Service Manager */}
             <Route path="/services" element={<ServiceManager />} />
           </Routes>
         </main>
