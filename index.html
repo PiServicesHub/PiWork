@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task4Pi - Dashboard</title>
+    <style>
+        /* Dein bestehendes CSS bleibt hier unverändert */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #6200ea;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card a {
+            color: #8b00ff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .button {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #8b00ff;
+        }
+
+        #servicesList ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #servicesList li {
+            background-color: #f4f4f4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Intro-Style */
+        #intro {
+            background-color: black;
+            color: #00ff99;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 4rem;
+            overflow: hidden;
+        }
+
+        /* Typing-Animation */
+        .typing {
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(15) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Dashboard-Style */
+        #main-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Intro-Screen -->
+    <div id="intro">
+        <span class="typing">∏</span>
+    </div>
+
+    <!-- Root Element für dynamischen Inhalt -->
+    <div id="root" style="display: none;"></div>
+
+    <script>
+        // Nach 3 Sekunden Intro ausblenden, Root anzeigen und Dashboard rendern
+        setTimeout(() => {
+            document.getElementById('intro').style.display = 'none';
+            const rootElement = document.getElementById('root');
+            rootElement.style.display = 'block';
+
+            // Dashboard-Inhalt im root-Element
+            rootElement.innerHTML = `
+                <header>
+                    <h1>Task4Pi - Dashboard</h1>
+                </header>
+
+                <section id="servicesList" class="container">
+                    <h2>Alle angebotenen Dienstleistungen</h2>
+                    <ul id="serviceListContainer">
+                        <!-- Dynamische Listenelemente werden hier hinzugefügt -->
+                    </ul>
+
+                    <button id="addServiceBtn" class="button">Neue Dienstleistung hinzufügen</button>
+                </section>
+
+                <section id="add-service-form" class="container" style="display:none;">
+                    <h2>Neue Dienstleistung hinzufügen</h2>
+                    <form id="serviceForm">
+                        <div class="form-group">
+                            <label for="serviceName">Dienstleistung Name</label>
+                            <input type="text" id="serviceName" name="serviceName" placeholder="Name der Dienstleistung" required>
+                        </div>
+                        <button type="submit" class="button">Hinzufügen</button>
+                    </form>
+                </section>
+
+                <footer>
+                    <p>© 2025 Task4Pi | Alle Rechte vorbehalten</p>
+                </footer>
+            `;
+
+            // Beispiel für Daten, die die Dienstleistungen repräsentieren
+            let services = ["Dienstleistung 1", "Dienstleistung 2", "Dienstleistung 3"];
+
+            // DOM-Elemente
+            const showServicesBtn = document.getElementById('addServiceBtn');
+            const addServiceForm = document.getElementById('add-service-form');
+            const serviceListContainer = document.getElementById('serviceListContainer');
+            const serviceForm = document.getElementById('serviceForm');
+            const serviceNameInput = document.getElementById('serviceName');
+
+            // Funktion, um die Dienstleistungs-Liste anzuzeigen
+            function displayServices() {
+                serviceListContainer.innerHTML = ''; // Liste leeren
+
+                services.forEach(service => {
+                    const li = document.createElement('li');
+                    li.textContent = service;
+                    serviceListContainer.appendChild(li);
+                });
+            }
+
+            // Event Listener für "Neue Dienstleistung hinzufügen"
+            showServicesBtn.addEventListener('click', () => {
+                addServiceForm.style.display = 'block'; // Formular anzeigen
+            });
+
+            // Event Listener für das Hinzufügen einer neuen Dienstleistung
+            serviceForm.addEventListener('submit', (event) => {
+                event.preventDefault(); // Verhindert das Neuladen der Seite
+                const newService = serviceNameInput.value.trim();
+
+                if (newService) {
+                    services.push(newService); // Neue Dienstleistung hinzufügen
+                    displayServices(); // Liste aktualisieren
+                    serviceNameInput.value = ''; // Eingabefeld leeren
+                    addServiceForm.style.display = 'none'; // Formular verstecken
+                }
+            });
+
+            // Start: Liste anzeigen
+            displayServices();
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
