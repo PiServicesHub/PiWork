@@ -2,7 +2,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'; // ✅ React 18
 import 'normalize.css';
-import './defaults.css';
+import './styles.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
 
