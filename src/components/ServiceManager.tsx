@@ -1,105 +1,102 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const ServiceManager = () => {
-  const [newService, setNewService] = useState("");
-  const [category, setCategory] = useState("");
-  const [price, setPrice] = useState<number | "">("");
-  const [services, setServices] = useState<{ name: string; category: string; price: number }[]>([]);
+const ServiceManager: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
+  const [services, setServices] = useState<Array<{ name: string; category: string; description: string }>>([]);
 
-  const handleAddService = () => {
-    if (newService && category && price !== "" && price !== 0) {
-      setServices([
-        ...services,
-        {
-          name: newService,
-          category: category,
-          price: price as number, // Sicherstellen, dass price als Zahl behandelt wird
-        },
-      ]);
-      // Formular zurücksetzen
-      setNewService("");
-      setCategory("");
-      setPrice("");
-      setShowForm(false); // Form schließen
-    }
+  // Formular anzeigen oder ausblenden
+  const toggleForm = () => {
+    setShowForm((prev) => !prev);
+  };
+
+  // Service hinzufügen
+  const addService = (newService: { name: string; category: string; description: string }) => {
+    setServices((prev) => [...prev, newService]);
+    setShowForm(false); // Formular nach dem Hinzufügen schließen
   };
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">Service Manager</h1>
-      <button onClick={() => setShowForm(true)} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 mb-4">
-        + Add Service
+    <div>
+      <button onClick={toggleForm} className="bg-blue-500 text-white p-2 rounded">
+        Add Service
       </button>
 
       {showForm && (
-        <div className="mb-6 p-4 bg-gray-50 rounded shadow-md">
-          <h2 className="text-xl font-semibold mb-4">Neuen Service hinzufügen</h2>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <div className="mb-4">
-              <label htmlFor="serviceName" className="block text-gray-700">Service Name</label>
-              <input
-                id="serviceName"
-                type="text"
-                value={newService}
-                onChange={(e) => setNewService(e.target.value)}
-                placeholder="Name des Services"
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              />
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="category" className="block text-gray-700">Kategorie</label>
-              <select
-                id="category"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              >
-                <option value="">Wähle eine Kategorie</option>
-                <option value="Design">Design</option>
-                <option value="Entwicklung">Entwicklung</option>
-                <option value="Marketing">Marketing</option>
-              </select>
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="price" className="block text-gray-700">Preis (Pi)</label>
-              <input
-                id="price"
-                type="number"
-                value={price}
-                onChange={(e) => setPrice(Number(e.target.value))}
-                placeholder="Preis in Pi"
-                className="w-full px-3 py-2 border border-gray-300 rounded"
-              />
-            </div>
-
-            <div className="flex gap-2">
-              <button type="button" onClick={handleAddService} className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
-                Service hinzufügen
-              </button>
-              <button type="button" onClick={() => setShowForm(false)} className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">
-                Abbrechen
-              </button>
-            </div>
-          </form>
-        </div>
+        <ServiceForm onSubmit={addService} />
       )}
 
-      {services.length > 0 && (
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Aktuelle Services</h2>
-          <ul className="list-disc pl-5">
-            {services.map((service, index) => (
-              <li key={index}>
-                <strong>{service.name}</strong> - {service.category} - {service.price} Pi
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div className="mt-4">
+        <h2>Service List</h2>
+        <ul>
+          {services.map((service, index) => (
+            <li key={index}>
+              <h3>{service.name}</h3>
+              <p>{service.category}</p>
+              <p>{service.description}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
+  );
+};
+
+// Formular für das Hinzufügen eines neuen Services
+const ServiceForm: React.FC<{ onSubmit: (service: { name: string; category: string; description: string }) => void }> = ({ onSubmit }) => {
+  const [name, setName] = useState('');
+  const [category, setCategory] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit({ name, category, description });
+    setName('');
+    setCategory('');
+    setDescription('');
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-4">
+      <div className="mb-2">
+        <label className="block">Service Name</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="border p-2 rounded w-full"
+        />
+      </div>
+
+      <div className="mb-2">
+        <label className="block">Category</label>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          required
+          className="border p-2 rounded w-full"
+        >
+          <option value="">Select Category</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Mobile Development">Mobile Development</option>
+          <option value="Design">Design</option>
+        </select>
+      </div>
+
+      <div className="mb-2">
+        <label className="block">Description</label>
+        <textarea
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+          className="border p-2 rounded w-full"
+        />
+      </div>
+
+      <button type="submit" className="bg-green-500 text-white p-2 rounded mt-2">
+        Save Service
+      </button>
+    </form>
   );
 };
 
