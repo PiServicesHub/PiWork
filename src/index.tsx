@@ -1,14 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client'; // ✅ React 18
-import 'normalize.css';
-import './styles.css';
-import App from './App'; // App.tsx importieren
+import ReactDOM from 'react-dom/client';
+import App from './App'; // Deine Hauptkomponente (App)
+import './index.css'; // Deine CSS-Datei
 
-const container = document.getElementById('root')!;
-const root = createRoot(container);
+// Die App wird in das "root"-Element der HTML-Datei gerendert
+const rootElement = document.getElementById('root') as HTMLElement;
+const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <App /> {/* App-Komponente hier verwenden */}
+    <App />
   </React.StrictMode>
 );
