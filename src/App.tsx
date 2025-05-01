@@ -1,12 +1,10 @@
-// src/App.tsx
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="min-h-screen bg-gray-100 text-gray-900 font-sans p-4">
         {/* Header mit Navigation */}
         <header className="mb-6">
@@ -36,17 +34,12 @@ const App: React.FC = () => {
         {/* Main Content */}
         <main>
           <Routes>
-            {/* Startseite */}
-            <Route
-              path="/"
-              element={<h2 className="text-xl">Startseite von PiWork</h2>}
-            />
-            {/* Service Manager */}
+            <Route path="/" element={<h2 className="text-xl">Startseite von PiWork</h2>} />
             <Route path="/services" element={<ServiceManager />} />
           </Routes>
         </main>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
