@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "64c135d69f26903311c02367912e84f2",
+    "revision": "4bc8c46be9e046c16e770a6a329b7f7d",
     "url": "/PiWork/index.html"
   },
   {
-    "revision": "f5d8619111ab11488928",
-    "url": "/PiWork/static/css/main.0ffa0c7f.chunk.css"
+    "revision": "39b95e58290361f5c42c",
+    "url": "/PiWork/static/css/main.424310d2.chunk.css"
   },
   {
     "revision": "66cf4d69d4261051774a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PiWork/static/js/2.80cde81b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f5d8619111ab11488928",
+    "revision": "39b95e58290361f5c42c",
     "url": "/PiWork/static/js/main.af4159f9.chunk.js"
   },
   {
