@@ -3,156 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Task4Pi</title>
-
-
   <link rel="stylesheet" href="%PUBLIC_URL%/static/css/main.8f622cde.css">
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* Deine bestehenden Styles */
-    /* ... */
-    
-    /* Styles für das Formular */
-    .form-container {
-      display: none;
-      background: #1f1f1f;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 4px;
-    }
-
-    .form-container input, .form-container select, .form-container textarea {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-  </style>
+  
+  <title>Task4Pi</title>
 </head>
 <body>
-  
-  <!-- Intro-Screen -->
-  <div id="intro">
-    <span id="typing-text" class="typing">Welcome Pioneers</span>
-  </div>
-
   <!-- Hauptinhalt -->
   <div id="root"></div> <!-- React wird hier in den DOM eingebunden -->
   
+ 
+
   
-  <script src="%PUBLIC_URL%/static/js/main.6f86abf0.js"></script>
   
 
-    <div id="main-content">
-      <header>
-        <h1>∏Work</h1>
-        <button class="button" onclick="login()">Login</button>
-      </header>
-  
-      <section class="container">
-        <h2>Current Services</h2>
-        <button class="button" onclick="toggleServiceForm()">+ Add Service</button>
-        
-        <!-- Formular zum Hinzufügen eines Service -->
-        <div id="service-form" class="form-container">
-          <h3>New Service</h3>
-          <form onsubmit="submitService(event)">
-            <input type="text" id="serviceName" placeholder="Service Name" required />
-            <select id="serviceCategory" required>
-              <option value="">Select Category</option>
-              <option value="Web Development">Web Development</option>
-              <option value="Mobile Development">Mobile Development</option>
-              <option value="Design">Design</option>
-            </select>
-            <textarea id="serviceDescription" placeholder="Service Description" required></textarea>
-            <button type="submit" class="button">Save Service</button>
-          </form>
-        </div>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="serviceListContainer">
-            <!-- Dienste werden hier hinzugefügt -->
-          </tbody>
-        </table>
-      </section>
-    </div>
-
-
-  <script>
-    // Intro-Screen automatisch ausblenden
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        document.getElementById("intro").style.display = "none";
-        document.getElementById("main-content").style.display = "block";
-      }, 4500);
-    });
-
-    // Formular anzeigen/ausblenden
-    function toggleServiceForm() {
-      const form = document.getElementById('service-form');
-      form.style.display = form.style.display === 'block' ? 'none' : 'block';
-    }
-
-    // Service hinzufügen
-    function submitService(event) {
-      event.preventDefault();  // Verhindert das Neuladen der Seite
-
-      const name = document.getElementById('serviceName').value;
-      const category = document.getElementById('serviceCategory').value;
-      const description = document.getElementById('serviceDescription').value;
-
-      // Dienst zur Liste hinzufügen
-      const tbody = document.getElementById('serviceListContainer');
-
-      const tr = document.createElement('tr');
-      const tdName = document.createElement('td');
-      tdName.textContent = name;
-
-      const tdDesc = document.createElement('td');
-      tdDesc.textContent = description;
-
-      const tdActions = document.createElement('td');
-      const editBtn = document.createElement('button');
-      editBtn.textContent = 'Sell';
-      editBtn.onclick = () => alert('Bearbeiten wird später implementiert.');
-      const deleteBtn = document.createElement('button');
-      deleteBtn.textContent = 'Buy';
-      deleteBtn.onclick = () => tr.remove();
-
-      tdActions.append(editBtn, deleteBtn);
-      tr.append(tdName, tdDesc, tdActions);
-      tbody.appendChild(tr);
-
-      // Formular nach dem Hinzufügen zurücksetzen und ausblenden
-      document.getElementById('service-form').style.display = 'none';
-      document.getElementById('serviceName').value = '';
-      document.getElementById('serviceCategory').value = '';
-      document.getElementById('serviceDescription').value = '';
-    }
-
-    function login() {
-      alert("inspired by Nadja");
-    }
-  </script>
-
-  <footer>
-    <div>
-      <p>&copy; 2025 Task4Pi. All rights reserved.</p>
-      <p>
-        <a href="/impressum" style="color: white; text-decoration: none; margin: 0 10px;">Impressum</a> |
-        <a href="/datenschutz" style="color: white; text-decoration: none; margin: 0 10px;">Datenschutz</a> |
-        <a href="/kontakt" style="color: white; text-decoration: none; margin: 0 10px;">Kontakt</a>
-      </p>
-  </footer>
-
+   
 </body>
 </html>

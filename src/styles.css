@@ -1,5 +1,5 @@
 body {
-  background-image: url('pi-logo.jpg');
+  
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -23,6 +23,7 @@ footer {
 }
 
 header {
+  background-image: url('/pi-logo.png');
   background: #1f1f1f;
   padding: 1rem 2rem;
   display: flex;
@@ -96,7 +97,7 @@ tr:hover {
 }
 
 #main-content {
-  background-image: url('pi-logo.jpg');
+  background-image: url('/pi-logo.png');
   height: 100%;
   flex: 1;
   display: none;
