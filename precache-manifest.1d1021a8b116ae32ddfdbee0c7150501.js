@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7c2f6bfeff947e8fcae5fb19bcd658c0",
+    "revision": "057cc0780818557c9936bb21df049dad",
     "url": "/PiWork/index.html"
   },
   {
