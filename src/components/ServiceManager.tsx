@@ -62,7 +62,7 @@ const ServiceManager: React.FC = () => {
             </tbody>
           </table>
         ) : (
-          <p style={{ color: '#ccc' }}>Noch keine Services vorhanden.</p>
+          <p style={{ color: '#ccc' }}>Sorry, no services available yet</p>
         )}
       </section>
     </div>
