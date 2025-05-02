@@ -17,6 +17,8 @@ body {
   background-color: #1e293b;       /* Dunkelgrau */
   padding: 16px 0;                 /* Vertikales Padding für den Header */
   box-sizing: border-box;          /* Stellt sicher, dass Padding und Border im Layout berücksichtigt werden */
+  margin-bottom: 20px;
+
 }
 
 
@@ -332,7 +334,7 @@ body {
 }
 
 .app-container {
-  max-width: 1000px;
+  
   margin: 0 auto;
   padding: 20px;
 }
@@ -468,7 +470,7 @@ body {
 }
 /* Für den Container, der das Formular enthält */
 .app-container {
-  max-width: 1000px;
+ 
   margin: 0 auto;
   padding: 20px;
   display: flex;
