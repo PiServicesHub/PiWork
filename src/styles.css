@@ -10,22 +10,23 @@ body {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    text-shadow: 0 0 5px rgba(0,255,255,0.2);
+    text-shadow: 0 0 10px rgba(0,255,255,0.4), 0 0 20px rgba(0,255,255,0.4);
   }
   50% {
-    transform: scale(1.05);
-    text-shadow: 0 0 15px rgba(0,255,255,0.4);
+    transform: scale(1.1);
+    text-shadow: 0 0 20px rgba(0,255,255,0.6), 0 0 40px rgba(0,255,255,0.6);
   }
   100% {
     transform: scale(1);
-    text-shadow: 0 0 5px rgba(0,255,255,0.2);
+    text-shadow: 0 0 10px rgba(0,255,255,0.4), 0 0 20px rgba(0,255,255,0.4);
   }
 }
 
-/* Klasse, die du auf den Schriftzug anwendest */
+/* Anwendung der Klasse für den Puls-Effekt */
 .pulse {
-  animation: pulse 2s ease-in-out infinite;
+  animation: pulse 1.5s ease-in-out infinite;
 }
+
 
 
 
