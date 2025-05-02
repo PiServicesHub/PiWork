@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
 import ServiceListPreview from './components/ServiceListPreview';
-import './App.css'; // Wichtig für das CSS unten
+import './styles.css'; // Wichtig für das CSS unten
 
 const SplashScreen: React.FC = () => {
   return (
