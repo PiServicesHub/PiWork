@@ -14,7 +14,8 @@ body {
 .header {
   width: 100%;
   background-color: #1e293b;
-  padding: 16px 0;
+  margin-bottom: 20; 
+  padding: 10px 0;
 }
 
 
@@ -49,7 +50,7 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+
   padding: 20px;
 }
 
