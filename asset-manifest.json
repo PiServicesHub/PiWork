@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/PiWork/static/css/main.5fbc9ec8.chunk.css",
-    "main.js": "/PiWork/static/js/main.89749c38.chunk.js",
-    "runtime-main.js": "/PiWork/static/js/runtime-main.d434435f.js",
-    "static/js/2.80cde81b.chunk.js": "/PiWork/static/js/2.80cde81b.chunk.js",
-    "index.html": "/PiWork/index.html",
-    "precache-manifest.9ea37482a40c29a376b6b0d638ccd3cc.js": "/PiWork/precache-manifest.9ea37482a40c29a376b6b0d638ccd3cc.js",
-    "service-worker.js": "/PiWork/service-worker.js",
-    "static/js/2.80cde81b.chunk.js.LICENSE.txt": "/PiWork/static/js/2.80cde81b.chunk.js.LICENSE.txt"
+    "main.css": "./static/css/main.5fbc9ec8.chunk.css",
+    "main.js": "./static/js/main.89749c38.chunk.js",
+    "runtime-main.js": "./static/js/runtime-main.2677ecbc.js",
+    "static/js/2.80cde81b.chunk.js": "./static/js/2.80cde81b.chunk.js",
+    "index.html": "./index.html",
+    "precache-manifest.e5bd4f1c2b3478af2341f94c95513a01.js": "./precache-manifest.e5bd4f1c2b3478af2341f94c95513a01.js",
+    "service-worker.js": "./service-worker.js",
+    "static/js/2.80cde81b.chunk.js.LICENSE.txt": "./static/js/2.80cde81b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d434435f.js",
+    "static/js/runtime-main.2677ecbc.js",
     "static/js/2.80cde81b.chunk.js",
     "static/css/main.5fbc9ec8.chunk.css",
     "static/js/main.89749c38.chunk.js"
