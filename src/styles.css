@@ -6,26 +6,6 @@ body {
   background-color: #111827;
   color: #f3f4f6;
 }
-/* === Introscreen === */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    text-shadow: 0 0 10px rgba(0,255,255,0.4), 0 0 20px rgba(0,255,255,0.4);
-  }
-  50% {
-    transform: scale(1.1);
-    text-shadow: 0 0 20px rgba(0,255,255,0.6), 0 0 40px rgba(0,255,255,0.6);
-  }
-  100% {
-    transform: scale(1);
-    text-shadow: 0 0 10px rgba(0,255,255,0.4), 0 0 20px rgba(0,255,255,0.4);
-  }
-}
-
-/* Anwendung der Klasse für den Puls-Effekt */
-.pulse {
-  animation: pulse 1.5s ease-in-out infinite;
-}
 
 
 
@@ -476,6 +456,43 @@ body {
     }
   }
   
+/* === Introscreen === */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 10px rgba(0, 255, 231, 0.2), 
+      0 0 20px rgba(174, 129, 255, 0.15);
+    color: #00ffe7;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 
+      0 0 20px rgba(0, 255, 231, 0.5), 
+      0 0 40px rgba(174, 129, 255, 0.3),
+      0 0 10px rgba(255, 204, 0, 0.1);
+    color: #ae81ff;
+  }
+  100% {
+    transform: scale(1.1);
+    text-shadow: 
+      0 0 30px rgba(0, 255, 231, 0.8), 
+      0 0 60px rgba(174, 129, 255, 0.5),
+      0 0 20px rgba(255, 204, 0, 0.3);
+    color: #ffffff;
+  }
+}
+
+.splash-title.pulse {
+  animation: pulse 3.5s ease-in-out infinite;
+  transition: color 1s ease-in-out;
+}
+
+
+/* Anwendung der Klasse für den Puls-Effekt */
+.pulse {
+  animation: pulse 4s ease-in-out infinite;
+}
 
 
 
