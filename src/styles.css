@@ -1,135 +1,112 @@
-/* styles.css */
-
-/* Grundstruktur */
+/* === Grundstruktur === */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111827; /* Dark background */
-  color: #f1f5f9; /* Sanft hellgraue Schrift */
+  background-color: #111827;
+  color: #f3f4f6;
 }
 
-/* styles.css */
-
-/* Header-Balken */
-.header {
-  width: 1000%;                     /* Maximale Breite */
-  background-color: #1e293b;       /* Dunkelgrau */
-  padding: 16px 0;                 /* Vertikales Padding für den Header */
-  box-sizing: border-box;          /* Stellt sicher, dass Padding und Border im Layout berücksichtigt werden */
-  margin-bottom: 20px;
-
-}
-
-
-/* Innerer Container für den Header */
-.header-inner {
-  max-width: 1200px;                /* Maximale Breite des Containers */
-  margin: 0 auto;                   /* Zentriert den Inhalt */
+.app-container {
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
-  justify-content: space-between;   /* Positioniert Inhalt links und rechts */
-  align-items: center;              /* Vertikale Zentrierung */
-  padding: 0 20px;                  /* Horizontaler Abstand */
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
 }
-/* Logo linksbündig */
+
+/* === Header === */
+.header {
+  width: 100%;
+  background-color: #1e293b;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .app-title {
   font-size: 2.5rem;
+  font-weight: bold;
   color: #facc15;
   margin: 0;
 }
 
-/* Login-Button rechts */
+/* === Navigation === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1f2937;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #60a5fa;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 8px 12px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #374151;
+  color: #fff;
+}
+
 .nav-login {
   background-color: #6f42c1;
   color: white;
   padding: 10px 16px;
   border: none;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.app-container {
-  display: flex;
-  flex-direction: column;
-
-}
-
-
-.app-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #f9fafb;
-}
-
-/* Navigation */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  background-color: #1f2937; /* dunkles Grau */
-  border-radius: 8px;
-  
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #60a5fa; /* helles Blau */
-  font-size: 1.1rem;
-  font-weight: bold;
- 
-  border-radius: 6px;
-  transition: background 0.2s ease;
-}
-
-.nav-link:hover {
-  background-color: #374151; /* dunkler Hover-Hintergrund */
-}
-
-.nav-login {
-  padding: 10px 16px;
-  font-size: 1rem;
-  background-color: #8b5cf6; /* violett */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .nav-login:hover {
-  background-color: #7c3aed;
+  background-color: #5a32a3;
 }
 
-/* Main Content */
+/* === Main Content === */
 .main-content {
   flex-grow: 1;
   padding: 10px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
 }
 
-/* Section Title */
 .section-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #f3f4f6;
+  margin-bottom: 1rem;
+  color: #facc15;
 }
 
-/* Footer */
+/* === Footer === */
 .footer {
   text-align: center;
   margin-top: 30px;
   font-size: 0.9rem;
-  color: #9ca3af; /* mittelgrau */
+  color: #9ca3af;
 }
 
 .footer-link {
@@ -142,211 +119,7 @@ body {
   text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-.service-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  color: #f1f5f9;
-}
-
-.service-table th,
-.service-table td {
-  padding: 12px;
-  border: 1px solid #2c2c2c;
-}
-
-.service-table th {
-  background-color: #1f2937;
-}
-
-.service-table tr:nth-child(even) {
-  background-color: #1a1a1a;
-}
-
-.action-button {
-  padding: 6px 12px;
-  margin-right: 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.action-button.sell {
-  background-color: #eab308;
-  color: #000;
-}
-
-.action-button.buy {
-  background-color: #ef4444;
-  color: #fff;
-}
-
-.form-container {
-  background-color: #1f2937;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #444;
-  background-color: #111;
-  color: #f1f5f9;
-}
-
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #1f2937;
-  border-radius: 8px;
-  margin-bottom: 30px;
-}
-
-.form-container {
-  background-color: #1f2937;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  color: #f1f5f9;
-  width: 100%;
-  max-width: 600px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  margin-bottom: 6px;
-  font-weight: bold;
-  color: #e5e7eb;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  padding: 10px;
-  border: 1px solid #374151;
-  border-radius: 6px;
-  background-color: #111827;
-  color: #f1f5f9;
-  font-size: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #60a5fa;
-  background-color: #1f2937;
-}
-
-.nav-login {
-  padding: 10px 16px;
-  background-color: #6f42c1;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-login:hover {
-  background-color: #5a32a3;
-}
-
-@media (max-width: 768px) {
-  .form-container {
-    padding: 16px;
-    width: 100%;
-  }
-
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-size: 1rem;
-  }
-
-  .nav-login {
-    width: 100%;
-    margin-top: 10px;
-  }
-}
-
-@keyframes clickPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.96);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.button-animated {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button-animated:active {
-  animation: clickPulse 0.2s ease;
-}
-
-/* === Neue Klassen für dunkles, schönes Design === */
-
-body {
-  background-color: #111827;
-  color: #f3f4f6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.app-container {
-  
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #facc15;
-  margin-bottom: 1rem;
-}
-
-/* Formular */
+/* === Formulare === */
 .form-container {
   background-color: #1e293b;
   padding: 24px;
@@ -354,17 +127,21 @@ body {
   margin-bottom: 20px;
   color: #f1f5f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 .form-group {
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-  display: block;
+  margin-bottom: 8px;
   font-weight: 600;
   color: #d1d5db;
-  margin-bottom: 8px;
   font-size: 1rem;
 }
 
@@ -378,6 +155,7 @@ body {
   padding: 10px;
   width: 100%;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -388,46 +166,7 @@ body {
   background-color: #1f2937;
 }
 
-/* Buttons */
-.nav-login,
-.action-button {
-  padding: 10px 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-right: 8px;
-}
-
-.nav-login {
-  background-color: #6f42c1;
-  color: white;
-}
-
-.nav-login:hover {
-  background-color: #5a32a3;
-}
-
-.action-button.sell {
-  background-color: #fbbf24;
-  color: black;
-}
-
-.action-button.sell:hover {
-  background-color: #facc15;
-}
-
-.action-button.buy {
-  background-color: #ef4444;
-  color: white;
-}
-
-.action-button.buy:hover {
-  background-color: #dc2626;
-}
-
-/* Tabelle */
+/* === Tabellen === */
 .service-table {
   width: 100%;
   border-collapse: collapse;
@@ -454,96 +193,37 @@ body {
   background-color: #2d3748;
 }
 
-/* Animation */
-@keyframes clickPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(0.95); }
-  100% { transform: scale(1); }
-}
-
-.button-animated {
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button-animated:active {
-  animation: clickPulse 0.2s ease;
-}
-/* Für den Container, der das Formular enthält */
-.app-container {
- 
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* Horizontale Zentrierung */
-  justify-content: center;  /* Vertikale Zentrierung */
-  height: 100vh;  /* Höhe des Viewports */
-}
-
-/* Formular Container */
-.form-container {
-  background-color: #1e293b;
-  padding: 24px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  color: #f1f5f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 600px;  /* Maximale Breite des Formulars */
-  box-sizing: border-box;
-}
-
-/* Formulargruppen (Input, Select, Textarea) */
-.form-group {
-  margin-bottom: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  display: block;
+/* === Buttons === */
+.action-button {
+  padding: 10px 16px;
   font-weight: 600;
-  color: #d1d5db;
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-/* Eingabefelder */
-.form-group input,
-.form-group select,
-.form-group textarea {
-  background-color: #111827;
-  color: #f9fafb;
-  border: 1px solid #374151;
+  border: none;
   border-radius: 6px;
-  padding: 10px;
-  width: 100%;
+  cursor: pointer;
   font-size: 1rem;
+  margin-right: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* Hover & Fokus-Effekte für Eingabefelder */
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: #60a5fa;
-  background-color: #1f2937;
+.action-button.sell {
+  background-color: #fbbf24;
+  color: black;
 }
 
-/* Responsive Design für Mobilgeräte */
-@media (max-width: 768px) {
-  .form-container {
-    padding: 16px;
-    width: 90%;  /* Auf kleineren Geräten breiter */
-  }
-  
-  .nav-login {
-    width: 100%;
-    margin-top: 10px;
-  }
+.action-button.sell:hover {
+  background-color: #facc15;
 }
 
-/* Intro Container */
+.action-button.buy {
+  background-color: #ef4444;
+  color: white;
+}
+
+.action-button.buy:hover {
+  background-color: #dc2626;
+}
+
+/* === Intro === */
 #intro {
   display: flex;
   justify-content: center;
@@ -554,11 +234,11 @@ body {
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
-/* Getippte Textanimation */
 .typing {
   display: inline-block;
   border-right: 3px solid #facc15;
@@ -566,53 +246,16 @@ body {
   animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing Animation */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-/* Cursor Blinken */
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
 
-/* Responsivität: Skalierung der Schrift auf mobilen Geräten */
-@media (max-width: 768px) {
-  #intro {
-    font-size: 1.5rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Hero Section*/
-
+/* === Hero Section === */
 .home-hero {
   text-align: center;
   padding: 60px 20px;
@@ -642,6 +285,7 @@ body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .hero-button {
@@ -672,4 +316,36 @@ body {
   background-color: #1e40af;
   color: white;
   border-color: #1e40af;
+}
+
+/* === Animation === */
+@keyframes clickPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.button-animated {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-animated:active {
+  animation: clickPulse 0.2s ease;
+}
+
+/* === Responsive Anpassung === */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 16px;
+    width: 90%;
+  }
+
+  .nav-login {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #intro {
+    font-size: 1.5rem;
+  }
 }

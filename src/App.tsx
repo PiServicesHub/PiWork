@@ -7,7 +7,7 @@ import ServiceListPreview from './components/ServiceListPreview';
 const Navigation: React.FC = () => (
   <nav className="navbar">
     <div className="nav-links">
-      <Link to="/" className="nav-link button animated">∏Home</Link>
+      <Link to="/" className="nav-link button animated">Home</Link>
       <Link to="/services" className="nav-link button animated">Marketplace</Link>
       <Link to="/login" className="nav-link button animated">Login</Link>
      
