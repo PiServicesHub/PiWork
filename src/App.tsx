@@ -8,7 +8,7 @@ const Navigation: React.FC = () => (
     <div className="nav-links">
 
 
-      <Link to="/" className="hero-button">
+      <Link to="/" className="nav-link">
       ∏Home
       </Link>
     
@@ -58,7 +58,7 @@ const App: React.FC = () => (
   <BrowserRouter>
     <div className="app-container">
       {/* Header */}
-      <header className="header">
+      <header className="home-hero">
         <h1 className="home-hero">∏Work</h1>
       </header>
 
