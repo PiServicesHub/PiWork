@@ -19,13 +19,13 @@ const ServiceManager: React.FC = () => {
     <div className="app-container">
       {/* Header */}
       <header className="header">
-        <h2 className="section-title">Service Manager</h2>
+        <h2 className="section-title">Create your Service</h2>
       </header>
 
       {/* Services Section */}
       <section>
-        <button onClick={toggleForm} className="nav-login" style={{ marginBottom: '20px' }}>
-          + Add Service
+        <button onClick={toggleForm} className="nav-login button-animated" style={{ marginBottom: '20px' }}>
+          Add Service
         </button>
 
         {showForm && <ServiceForm onSubmit={addService} />}
@@ -47,12 +47,15 @@ const ServiceManager: React.FC = () => {
                   <td>{service.category}</td>
                   <td>{service.description}</td>
                   <td>
-                    <button onClick={() => alert('Sell action coming soon')} className="action-button sell">
+                    <button
+                      onClick={() => alert('Sell action coming soon')}
+                      className="action-button sell button-animated"
+                    >
                       Sell
                     </button>
                     <button
                       onClick={() => setServices(services.filter((_, i) => i !== index))}
-                      className="action-button buy"
+                      className="action-button buy button-animated"
                     >
                       Buy
                     </button>
@@ -117,7 +120,9 @@ const ServiceForm: React.FC<{ onSubmit: (service: { name: string; category: stri
         />
       </div>
 
-      <button type="submit" className="nav-login">Save Service</button>
+      <button type="submit" className="nav-login button-animated">
+        Save Service
+      </button>
     </form>
   );
 };
