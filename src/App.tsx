@@ -24,14 +24,12 @@ const App: React.FC = () => (
 
       {/* Header */}
       <header className="header">
-        <div className="navbar">
-          <div className="nav-links">
-
-            <h1 className="app-title">∏Work</h1>
+        <div className="header">
+          <div className="header">
+            <h1 className="header">∏Work</h1>
+          </div>
         </div>
-
         
-        </div>
 
       </header>
 
