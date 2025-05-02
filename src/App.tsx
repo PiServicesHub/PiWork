@@ -3,17 +3,8 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import ServiceManager from './components/ServiceManager';
 import ServiceListPreview from './components/ServiceListPreview';
-import './styles.css'; // Wichtig für das CSS unten
-import SplashScreen from './SplashScreen.css';
-
-const SplashScreen: React.FC = () => {
-  return (
-    <div className="splash-screen">
-      <h1 className="splash-title">∏Work</h1>
-      <p className="splash-subtitle">Loading your digital economy...</p>
-    </div>
-  );
-};
+import SplashScreen from './components/SplashScreen';  // Nur die Komponente importieren
+import './styles.css';  // Globale Styles
 
 const Navigation: React.FC = () => (
   <nav className="navbar">
@@ -55,7 +46,7 @@ const App: React.FC = () => {
               element={
                 <section>
                   <h2 className="section-title">Task4∏</h2>
-                  <p className="section-subtitle">Your platform for Pi services </p>
+                  <p className="section-subtitle">Your platform for Pi services</p>
                   <ServiceListPreview />
                 </section>
               }
@@ -70,7 +61,7 @@ const App: React.FC = () => {
         <footer className="footer">
           <p>&copy; {new Date().getFullYear()} Task4Pi. All rights reserved.</p>
           <p>
-            <Link to="/impressum" className="footer-link ">Impressum</Link> |
+            <Link to="/impressum" className="footer-link">Impressum</Link> |
             <Link to="/datenschutz" className="footer-link">Datenschutz</Link> |
             <Link to="/kontakt" className="footer-link">Kontakt</Link>
           </p>
