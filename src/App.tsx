@@ -2,18 +2,26 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
 
-// Einfache Navigationskomponente mit Buttons rechts ausgerichtet
+// Einfache Navigationskomponente mit verbesserten Buttons
 const Navigation: React.FC = () => (
   <nav className="bg-white rounded shadow p-4 mb-6 flex justify-between items-center">
     <div className="flex space-x-4">
-      <Link to="/" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
+      <Link
+        to="/"
+        className="inline-flex items-center px-5 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-300"
+      >
         Home
       </Link>
-      <Link to="/services" className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+      <Link
+        to="/services"
+        className="inline-flex items-center px-5 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-green-300"
+      >
         Service Manager
       </Link>
     </div>
-    <button className="px-4 py-2 bg-purple-500 text-white rounded hover:bg-purple-600 transition">
+    <button
+      className="inline-flex items-center px-5 py-2 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-purple-300"
+    >
       Login
     </button>
   </nav>
@@ -38,8 +46,8 @@ const App: React.FC = () => (
             path="/"
             element={
               <section>
-                <h2 className="text-2xl font-semibold mb-4">Welcome to PiWork</h2>
-                <p>Welcome! Choose an option from the menu to get started.</p>
+                <h2 className="text-2xl font-semibold mb-4">Startseite von PiWork</h2>
+                <p>Willkommen! Wähle eine Option im Menü, um zu beginnen.</p>
               </section>
             }
           />
@@ -56,11 +64,11 @@ const App: React.FC = () => (
           </Link>
           |
           <Link to="/datenschutz" className="mx-2 hover:underline">
-          Data protection
+            Datenschutz
           </Link>
           |
           <Link to="/kontakt" className="mx-2 hover:underline">
-            Contact
+            Kontakt
           </Link>
         </p>
       </footer>
