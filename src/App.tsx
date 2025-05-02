@@ -11,26 +11,21 @@ const Navigation: React.FC = () => (
       <Link to="/" className="nav-link">
       ∏Home
       </Link>
-
-      <Link to="/" className="nav-link">
-      ∏Home
-      </Link>
-
     
       <Link to="/services" className="nav-link">
       Marketplace
       </Link>
 
-      <Link to="/" className="nav-link">
+      <Link to="/" className="home-hero">
       Add Requests
       </Link>
 
-      <Link to="/" className="nav-link">
+      <Link to="/" className="hero-actions">
       Sell Service
       </Link>
 
       <Link to="/" className="nav-link">
-      Login & My Services
+      Login
       </Link>
 
       
@@ -54,7 +49,7 @@ const Navigation: React.FC = () => (
 
 
     </div>
-    <button className="nav-login">Login</button>
+    
   </nav>
 );
 
