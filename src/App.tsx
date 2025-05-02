@@ -6,12 +6,53 @@ import ServiceManager from './components/ServiceManager';
 const Navigation: React.FC = () => (
   <nav className="navbar">
     <div className="nav-links">
+
+
       <Link to="/" className="nav-link">
-      ∏
+      ∏Home
       </Link>
+
+      <Link to="/" className="nav-link">
+      ∏Home
+      </Link>
+
+    
       <Link to="/services" className="nav-link">
-        Add Service
+      Marketplace
       </Link>
+
+      <Link to="/" className="nav-link">
+      Add Requests
+      </Link>
+
+      <Link to="/" className="nav-link">
+      Sell Service
+      </Link>
+
+      <Link to="/" className="nav-link">
+      Login & My Services
+      </Link>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     <button className="nav-login">Login</button>
   </nav>
@@ -29,6 +70,22 @@ const App: React.FC = () => (
       {/* Navigation */}
       <Navigation />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* Main Content */}
       <main className="main-content">
         <Routes>
@@ -44,6 +101,34 @@ const App: React.FC = () => (
           <Route path="/services" element={<ServiceManager />} />
         </Routes>
       </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       {/* Footer */}
       <footer className="footer">
