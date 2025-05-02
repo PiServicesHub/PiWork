@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
+import ServiceListPreview from './components/ServiceListPreview';
+
 
 // Einfache Navigationskomponente
 const Navigation: React.FC = () => (
@@ -58,9 +60,25 @@ const App: React.FC = () => (
   <BrowserRouter>
     <div className="app-container">
       {/* Header */}
-      <header className="home-hero">
-        <h1 className="home-hero">∏Work</h1>
+      <header className="header">
+        <h1 className="header">∏Work</h1>
       </header>
+
+
+      <Route
+  path="/"
+  element={
+    <section>
+      <h2 className="section-title">Task4∏</h2>
+      <p className="section-subtitle">Deine Plattform für Pi-Dienstleistungen</p>
+      <ServiceListPreview />
+    </section>
+  }
+/>
+
+
+
+
 
       {/* Navigation */}
       <Navigation />
