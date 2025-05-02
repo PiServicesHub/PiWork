@@ -2,7 +2,7 @@
 
 /* Grundstruktur */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #111827; /* Dark background */
@@ -13,7 +13,7 @@ body {
 
 /* Header-Balken */
 .header {
-  width: 100%;                     /* Maximale Breite */
+  width: 1000%;                     /* Maximale Breite */
   background-color: #1e293b;       /* Dunkelgrau */
   padding: 16px 0;                 /* Vertikales Padding für den Header */
   box-sizing: border-box;          /* Stellt sicher, dass Padding und Border im Layout berücksichtigt werden */
