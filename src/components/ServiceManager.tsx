@@ -18,8 +18,8 @@ const ServiceManager: React.FC = () => {
   return (
     <div className="app-container">
       {/* Header */}
-      <header className="section-title">
-        <h2 className="section-title">Create your Service</h2>
+      <header className="app-title">
+        <h2 className="app-title">Create your Service</h2>
       </header>
 
       {/* Services Section */}
