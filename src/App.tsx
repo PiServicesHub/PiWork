@@ -9,8 +9,6 @@ const Navigation: React.FC = () => (
     <div className="nav-links">
       <Link to="/" className="nav-link">∏Home</Link>
       <Link to="/services" className="nav-link">Marketplace</Link>
-      <Link to="/add-request" className="nav-link">Add Requests</Link>
-      <Link to="/sell" className="nav-link">Sell Service</Link>
       <Link to="/login" className="nav-link">Login</Link>
     </div>
   </nav>
