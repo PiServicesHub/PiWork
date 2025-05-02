@@ -53,7 +53,6 @@ body {
   display: flex;
   flex-direction: column;
 
-  padding: 20px;
 }
 
 
@@ -68,10 +67,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  
   background-color: #1f2937; /* dunkles Grau */
   border-radius: 8px;
-  margin-bottom: 30px;
+  
 }
 
 .nav-links {
@@ -84,7 +83,7 @@ body {
   color: #60a5fa; /* helles Blau */
   font-size: 1.1rem;
   font-weight: bold;
-  padding: 8px 14px;
+ 
   border-radius: 6px;
   transition: background 0.2s ease;
 }
