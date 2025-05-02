@@ -2,51 +2,41 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ServiceManager from './components/ServiceManager';
 
-// Einfache Navigationskomponente mit verbesserten Buttons
+// Einfache Navigationskomponente
 const Navigation: React.FC = () => (
-  <nav className="bg-white rounded shadow p-4 mb-6 flex justify-between items-center">
-    <div className="flex space-x-4">
-      <Link
-        to="/"
-        className="inline-flex items-center px-5 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-blue-300"
-      >
+  <nav className="navbar">
+    <div className="nav-links">
+      <Link to="/" className="nav-link">
         Home
       </Link>
-      <Link
-        to="/services"
-        className="inline-flex items-center px-5 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-green-300"
-      >
+      <Link to="/services" className="nav-link">
         Service Manager
       </Link>
     </div>
-    <button
-      className="inline-flex items-center px-5 py-2 bg-purple-500 text-white rounded-lg shadow-md hover:bg-purple-600 hover:shadow-lg transition focus:outline-none focus:ring-2 focus:ring-purple-300"
-    >
-      Login
-    </button>
+    <button className="nav-login">Login</button>
   </nav>
 );
 
-// App-Komponente mit Routing und Sticky Footer
+// App-Komponente mit Routing
 const App: React.FC = () => (
   <BrowserRouter>
-    <div className="flex flex-col min-h-screen bg-gray-100 text-gray-900 font-sans p-6">
+    <div className="app-container">
       {/* Header */}
-      <header className="mb-4">
-        <h1 className="text-4xl font-bold text-center">∏Work</h1>
+      <header className="header">
+        <h1 className="app-title">∏Work</h1>
       </header>
 
       {/* Navigation */}
       <Navigation />
 
       {/* Main Content */}
-      <main className="flex-grow max-w-4xl mx-auto">
+      <main className="main-content">
         <Routes>
           <Route
             path="/"
             element={
               <section>
-                <h2 className="text-2xl font-semibold mb-4">Startseite von PiWork</h2>
+                <h2 className="section-title">Startseite von PiWork</h2>
                 <p>Willkommen! Wähle eine Option im Menü, um zu beginnen.</p>
               </section>
             }
@@ -56,18 +46,18 @@ const App: React.FC = () => (
       </main>
 
       {/* Footer */}
-      <footer className="mt-8 text-center text-sm text-gray-600">
+      <footer className="footer">
         <p>&copy; {new Date().getFullYear()} Task4Pi. All rights reserved.</p>
-        <p className="mt-2">
-          <Link to="/impressum" className="mx-2 hover:underline">
+        <p>
+          <Link to="/impressum" className="footer-link">
             Impressum
           </Link>
           |
-          <Link to="/datenschutz" className="mx-2 hover:underline">
+          <Link to="/datenschutz" className="footer-link">
             Datenschutz
           </Link>
           |
-          <Link to="/kontakt" className="mx-2 hover:underline">
+          <Link to="/kontakt" className="footer-link">
             Kontakt
           </Link>
         </p>
