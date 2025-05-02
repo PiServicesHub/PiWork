@@ -22,13 +22,15 @@ const App: React.FC = () => (
 
 
 
-      {/* Header */}
-      <header className="header">
-  <div className="header">
-    <h1 className="header">∏Work</h1>
+    
+{/* Header */}
+<header className="header">
+  <div className="header-inner">
+    <h1 className="app-title">∏Work</h1>
    
   </div>
 </header>
+
 
 
       {/* Navigation */}
