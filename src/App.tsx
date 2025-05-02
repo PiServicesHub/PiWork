@@ -7,10 +7,10 @@ const Navigation: React.FC = () => (
   <nav className="navbar">
     <div className="nav-links">
       <Link to="/" className="nav-link">
-        Home
+      ∏
       </Link>
       <Link to="/services" className="nav-link">
-        Service Manager
+        Add Service
       </Link>
     </div>
     <button className="nav-login">Login</button>
@@ -36,8 +36,8 @@ const App: React.FC = () => (
             path="/"
             element={
               <section>
-                <h2 className="section-title">Startseite von PiWork</h2>
-                <p>Willkommen! Wähle eine Option im Menü, um zu beginnen.</p>
+                <h2 className="section-title">Task4∏</h2>
+                <p></p>
               </section>
             }
           />
