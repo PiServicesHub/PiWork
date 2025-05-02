@@ -357,7 +357,7 @@ body {
     height: 100vh;
     background-color: #000;
     color: white;
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 3.5s ease-in-out;
   }
   
   .splash-title {
