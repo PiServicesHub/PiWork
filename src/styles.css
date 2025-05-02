@@ -9,6 +9,28 @@ body {
   color: #f1f5f9; /* Sanft hellgraue Schrift */
 }
 
+/* styles.css */
+
+.header {
+  background-color: #1e293b;
+  padding: 16px 20px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin: 0;
+}
+
+
 .app-container {
   display: flex;
   flex-direction: column;
