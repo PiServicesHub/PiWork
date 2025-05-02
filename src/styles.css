@@ -11,23 +11,25 @@ body {
 
 /* styles.css */
 
+/* Header-Balken */
 .header {
-  width: 100%;
-  background-color: #1e293b;
-  margin-bottom: 20; 
-  padding: 10px 0;
+  width: 100%;                     /* Maximale Breite */
+  background-color: #1e293b;       /* Dunkelgrau */
+  padding: 16px 0;                 /* Vertikales Padding für den Header */
+  box-sizing: border-box;          /* Stellt sicher, dass Padding und Border im Layout berücksichtigt werden */
 }
 
 
+/* Innerer Container für den Header */
 .header-inner {
-    max-width: 1200px;         /* oder deine gewünschte Max-Breite */
-    margin: 0 auto;            /* zentriert im Viewport */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;       
+  max-width: 1200px;                /* Maximale Breite des Containers */
+  margin: 0 auto;                   /* Zentriert den Inhalt */
+  display: flex;
+  justify-content: space-between;   /* Positioniert Inhalt links und rechts */
+  align-items: center;              /* Vertikale Zentrierung */
+  padding: 0 20px;                  /* Horizontaler Abstand */
+  box-sizing: border-box;
 }
-
 /* Logo linksbündig */
 .app-title {
   font-size: 2.5rem;
