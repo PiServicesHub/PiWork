@@ -432,6 +432,128 @@ body {
 .button-animated:active {
   animation: clickPulse 0.2s ease;
 }
+/* Für den Container, der das Formular enthält */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Horizontale Zentrierung */
+  justify-content: center;  /* Vertikale Zentrierung */
+  height: 100vh;  /* Höhe des Viewports */
+}
+
+/* Formular Container */
+.form-container {
+  background-color: #1e293b;
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #f1f5f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px;  /* Maximale Breite des Formulars */
+  box-sizing: border-box;
+}
+
+/* Formulargruppen (Input, Select, Textarea) */
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Eingabefelder */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #111827;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Hover & Fokus-Effekte für Eingabefelder */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #60a5fa;
+  background-color: #1f2937;
+}
+
+/* Responsive Design für Mobilgeräte */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 16px;
+    width: 90%;  /* Auf kleineren Geräten breiter */
+  }
+  
+  .nav-login {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Intro Container */
+#intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e293b;
+  color: #facc15;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Getippte Textanimation */
+.typing {
+  display: inline-block;
+  border-right: 3px solid #facc15;
+  padding-right: 5px;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor Blinken */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Responsivität: Skalierung der Schrift auf mobilen Geräten */
+@media (max-width: 768px) {
+  #intro {
+    font-size: 1.5rem;
+  }
+}
+
 
 
 
