@@ -282,7 +282,7 @@ body {
 
 @keyframes scaleUp {
   0% {
-    transform: scale(0.5); /* Startgröße */
+    transform: scale(0.1); /* Startgröße */
   }
   100% {
     transform: scale(1); /* Endgröße */
