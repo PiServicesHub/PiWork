@@ -466,21 +466,21 @@ body {
   30% {
     color: #3b82f6; /* Mittelblau */
     text-shadow: 0 0 8px #3b82f6aa;
-    filter: brightness(1.2);
+    filter: brightness(1.1);
   }
   60% {
     color: #60a5fa; /* Hellblau */
     text-shadow: 0 0 12px #60a5fa88;
-    filter: brightness(1.4);
+    filter: brightness(1.7);
   }
   85% {
     color: #e0f2ff; /* Fast weiß */
-    text-shadow: 0 0 15px #e0f2ffcc;
-    filter: brightness(1.6);
+    text-shadow: 0 0 15px #fefeff; ;
+    filter: brightness(1.9);
   }
   100% {
-    color: #ffffff; /* Reinweiß */
-    text-shadow: 0 0 20px #ffffffcc;
+    color: #fefeff; 
+    text-shadow: 0 0 20px #4b01ac;
     filter: brightness(1.8);
   }
 }
@@ -489,14 +489,14 @@ body {
   from {
     text-shadow:
       0 0 5px #00ffff,
-      0 0 10px #00ffff,
-      0 0 20px #00ffff;
+      0 0 10px #4b01ac,
+      0 0 20px #fefeff; ;
   }
   to {
     text-shadow:
       0 0 10px #00e1ff,
       0 0 20px #00cfff,
-      0 0 30px #00b8ff;
+      0 0 30px #fefeff; ;
   }
 }
 
