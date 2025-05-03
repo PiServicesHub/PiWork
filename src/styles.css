@@ -559,6 +559,13 @@ body {
     glow 4s ease-in-out infinite;
   transition: color 1s ease-in-out 3s;
 }
+.welcome-text {
+  font-size: 1.25rem;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 1.5s ease-in;
+}
 
 
 }
