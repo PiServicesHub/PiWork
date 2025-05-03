@@ -24,7 +24,7 @@ const ServiceManager: React.FC = () => {
 
       {/* Services Section */}
       <section>
-        <button onClick={toggleForm} className="nav-login button-animated" style={{ marginBottom: '20px' }}>
+        <button onClick={toggleForm} className="nav-link button animated glow" style={{ marginBottom: '20px' }}>
           Add Service
         </button>
 
@@ -120,7 +120,7 @@ const ServiceForm: React.FC<{ onSubmit: (service: { name: string; category: stri
         />
       </div>
 
-      <button type="submit" className="nav-login button-animated">
+      <button type="submit" className="nav-link button animated">
         Save Service
       </button>
     </form>

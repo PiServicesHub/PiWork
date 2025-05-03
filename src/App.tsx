@@ -11,6 +11,7 @@ const Navigation: React.FC = () => (
     <div className="nav-links">
       <Link to="/" className="nav-link button animated">Home</Link>
       <Link to="/services" className="nav-link button animated">Marketplace</Link>
+      <Link to="/services" className="nav-link button animated">Swift Transfer</Link>
       <Link to="/login" className="nav-link button animated">Login</Link>
     </div>
   </nav>
@@ -45,8 +46,8 @@ const App: React.FC = () => {
               path="/"
               element={
                 <section>
-                  <h2 className="section-title">Task4∏</h2>
-                  <p className="section-subtitle">Your platform for Pi services</p>
+                  <h2 className="app-title">T4Pi: Empowering Digital Economies</h2>
+                  <p className="section-subtitle">Unlock the future of decentralized services with ease and security.</p>
                   <ServiceListPreview />
                 </section>
               }
