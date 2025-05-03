@@ -269,6 +269,36 @@ body {
   overflow: hidden;
 }
 
+#intro {
+  text-align: center;
+  padding-top: 30vh;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.intro-scale {
+  font-size: 3rem; /* Anfangsgröße */
+  animation: scaleUp 2s ease-out forwards; /* Skaliert das Element von klein nach groß */
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.5); /* Startgröße */
+  }
+  100% {
+    transform: scale(1); /* Endgröße */
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .typing {
   display: inline-block;
   border-right: 3px solid #facc15;

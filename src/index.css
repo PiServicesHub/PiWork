@@ -1,19 +1,19 @@
+/* Globale Styles */
 body {
-  
-    height: 100%;
+    background: #0f0f0f;
+    color: white;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
-    background: #0f0f0f;
-    color: #fff;
+    height: 100%;
   }
   
   footer {
-    background-color: #2c3e50; 
-    color: white; 
-    padding: 20px; 
-    text-align: center; 
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
     font-size: 14px;
     margin-top: auto;
   }
@@ -34,6 +34,7 @@ body {
     margin: 0;
   }
   
+  /* Intro Screen */
   #intro {
     display: flex;
     flex-direction: column;
@@ -65,6 +66,7 @@ body {
     }
   }
   
+  /* Button Styles */
   .button {
     background-color: lime;
     border: none;
@@ -79,6 +81,7 @@ body {
     background-color: #ccff00;
   }
   
+  /* Table Styles */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -95,13 +98,18 @@ body {
     background: #1a1a1a;
   }
   
+  /* Main Content */
   #main-content {
-   
+    background-color: #121212;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
     flex: 1;
     display: none;
   }
   
+  /* Service List */
   .service-name {
     color: lime;
   }
