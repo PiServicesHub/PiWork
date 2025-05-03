@@ -78,6 +78,16 @@ body {
   color: #fff;
 }
 
+.nav-link.button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
 .nav-login {
   background-color: #6f42c1;
   color: white;
@@ -106,7 +116,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #facc15;
+  color: #feFeFF;
 }
 
 /* === Footer === */
@@ -457,72 +467,56 @@ body {
   }
   
 /* === Introscreen === */
+/* === Introscreen Pulse-Glow Optimiert === */
 @keyframes pulse {
   0% {
-    color: #0a192f; /* Start: Dunkelblau */
-    text-shadow: none;
+    color: #0a192f; /* Dunkelblau, Start */
+    text-shadow: 0 0 2px #0a192f;
     filter: brightness(1);
   }
   30% {
-    color: #3b82f6; /* Mittelblau */
-    text-shadow: 0 0 8px #3b82f6aa;
-    filter: brightness(1.1);
+    color: #00bcd4; /* Sattes Cyan */
+    text-shadow: 0 0 8px #00bcd4aa, 0 0 12px #00bcd4aa;
+    filter: brightness(1.2);
   }
   60% {
-    color: #60a5fa; /* Hellblau */
-    text-shadow: 0 0 12px #60a5fa88;
-    filter: brightness(1.7);
+    color: #c2f9ff; /* Sehr helles Cyanweiß */
+    text-shadow: 0 0 12px #c2f9ff99, 0 0 18px #00ffff66;
+    filter: brightness(1.5);
   }
   85% {
-    color: #e0f2ff; /* Fast weiß */
-    text-shadow: 0 0 15px #fefeff; ;
-    filter: brightness(1.9);
+    color: #f5fdff; /* Fast weiß */
+    text-shadow: 0 0 18px #ffffffcc, 0 0 28px #aeefff88;
+    filter: brightness(1.8);
   }
   100% {
-    color: #fefeff; 
-    text-shadow: 0 0 20px #4b01ac;
-    filter: brightness(1.8);
+    color: #ffffff;
+    text-shadow: 0 0 26px #ffffffee, 0 0 40px #89f4ffbb;
+    filter: brightness(2);
   }
 }
 
 @keyframes glow {
-  from {
+  0% {
     text-shadow:
-      0 0 5px #00ffff,
-      0 0 10px #4b01ac,
-      0 0 20px #fefeff; ;
+      0 0 6px #0077ff55,
+      0 0 10px #00ffff88,
+      0 0 14px #ffffff55;
   }
-  to {
+  100% {
     text-shadow:
-      0 0 10px #00e1ff,
-      0 0 20px #00cfff,
-      0 0 30px #fefeff; ;
+      0 0 10px #00eaffaa,
+      0 0 20px #00cfffcc,
+      0 0 28px #ffffffdd;
   }
 }
 
-
-
 .splash-title.pulse {
-  animation: 
-    pulse 4s ease-in-out forwards,
-    glow 3s ease-in-out infinite;
+  animation:
+    pulse 6s ease-in-out forwards,
+    glow 4s ease-in-out infinite;
   transition: color 1s ease-in-out 3s;
 }
 
 
-
-/* Anwendung der Klasse für den Puls-Effekt */
-.pulse {
-  animation: pulse 4s ease-in-out infinite;
-}
-
-
-
-
-
-
-
-
-
-  
 }
