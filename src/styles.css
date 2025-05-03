@@ -485,10 +485,30 @@ body {
   }
 }
 
-.splash-title.pulse {
-  animation: pulse 6s ease-in-out forwards;
-  transition: color 1s ease-in-out;
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 20px #00ffff;
+  }
+  to {
+    text-shadow:
+      0 0 10px #00e1ff,
+      0 0 20px #00cfff,
+      0 0 30px #00b8ff;
+  }
 }
+
+
+
+.splash-title.pulse {
+  animation: 
+    pulse 4s ease-in-out forwards,
+    glow 3s ease-in-out infinite;
+  transition: color 1s ease-in-out 3s;
+}
+
 
 
 /* Anwendung der Klasse für den Puls-Effekt */
